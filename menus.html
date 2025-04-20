@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menus - Zina's Steakhouse & Grill</title>
+    <meta name="description" content="Explore the Lunch and Dinner menus at Zina's Steakhouse & Grill, featuring premium steaks, fresh seafood, and classic sides.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+             <div class="nav-container">
+                <ul class="nav-left">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menus.html">Menus</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Pickup / Delivery</a>
+                        <div class="dropdown-content">
+                            <a href="#">Order Pickup (Toast/Square)</a> <!-- Add actual link later -->
+                            <a href="#">Delivery via DoorDash</a> <!-- Add actual link later -->
+                            <a href="#">Delivery via UberEats</a> <!-- Add actual link later -->
+                            <a href="#">Delivery via Grubhub</a> <!-- Add actual link later -->
+                        </div>
+                    </li>
+                </ul>
+                <a href="index.html" class="logo-link">
+                    <img src="images/zinalogo2.png" alt="Zina's Steakhouse & Grill Logo" id="header-logo">
+                </a>
+                <ul class="nav-right">
+                    <li><a href="events.html">Private Events</a></li>
+                    <li><a href="location.html">Location & Hours</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="menu-intro">
+            <h1>Our Menus</h1>
+            <p>Whether you’re popping in for a quick business lunch or settling in for a date-night feast, our kitchen fires all day.</p>
+            <!-- Add PDF download link later -->
+            <a href="#" class="button">Download Full Menu (PDF)</a>
+        </section>
+
+        <section id="menu-display">
+            <!-- Menu Toggle Buttons (will need JS later) -->
+            <div class="menu-toggle">
+                <button id="show-lunch" class="button active">Lunch Menu</button>
+                <button id="show-dinner" class="button">Dinner Menu</button>
+            </div>
+
+            <!-- Lunch Menu (Visible by default) -->
+            <div id="lunch-menu" class="menu-content active">
+                <h2>Lunch Menu</h2>
+                
+                <h3>Starters</h3>
+                <div class="menu-item">
+                    <h4>French Onion Soup</h4>
+                    <p>Gruyère crust, sherry-kissed broth</p>
+                    <span class="price">$10</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Steakhouse Wedge</h4>
+                    <p>Iceberg, smoked bacon, blue cheese</p>
+                    <span class="price">$12</span>
+                </div>
+
+                <h3>Mains</h3>
+                <div class="menu-item">
+                    <h4>Bistro Filet (8 oz)</h4>
+                    <p>Garlic herb butter, crispy fries</p>
+                    <span class="price">$28</span>
+                </div>
+                 <div class="menu-item">
+                    <h4>Grilled Salmon</h4>
+                    <p>Lemon-dill beurre blanc, asparagus</p>
+                    <span class="price">$26</span>
+                </div>
+                 <div class="menu-item">
+                    <h4>Zina’s Burger</h4>
+                    <p>Dry-aged blend, aged cheddar, brioche</p>
+                    <span class="price">$19</span>
+                </div>
+
+                <h3>Sweets</h3>
+                 <div class="menu-item">
+                    <h4>NY Cheesecake</h4>
+                    <p>Seasonal berry compote</p>
+                    <span class="price">$9</span>
+                </div>
+            </div>
+
+            <!-- Dinner Menu (Hidden by default) -->
+            <div id="dinner-menu" class="menu-content">
+                <h2>Dinner Menu</h2>
+
+                <h3>Starters</h3>
+                 <div class="menu-item">
+                    <h4>Jumbo Shrimp Cocktail (4)</h4>
+                    <p>House horseradish sauce</p>
+                    <span class="price">$18</span>
+                </div>
+                 <div class="menu-item">
+                    <h4>Wagyu Carpaccio</h4>
+                    <p>Truffle aioli, shaved parmesan</p>
+                    <span class="price">$24</span>
+                </div>
+
+                <h3>Steaks*</h3>
+                 <div class="menu-item">
+                    <h4>Prime NY Strip (14 oz)</h4>
+                    <p>Oak-grilled, sea-salt finish</p>
+                    <span class="price">$52</span>
+                </div>
+                 <div class="menu-item">
+                    <h4>Bone-In Rib-eye (20 oz)</h4>
+                    <p>28-day dry-aged, roasted garlic</p>
+                    <span class="price">$68</span>
+                </div>
+                 <div class="menu-item">
+                    <h4>Chateaubriand for Two</h4>
+                    <p>Carved tableside, béarnaise</p>
+                    <span class="price">$120</span>
+                </div>
+                <p class="menu-note">*All steaks served with choice of peppercorn, béarnaise, or chimichurri.</p>
+
+
+                <h3>Not-Steak</h3>
+                 <div class="menu-item">
+                    <h4>Pan-Seared Branzino</h4>
+                    <p>Capers, lemon brown butter</p>
+                    <span class="price">$34</span>
+                </div>
+
+                <h3>Sides (to share)</h3>
+                 <div class="menu-item">
+                    <h4>Creamed Spinach</h4>
+                    <span class="price">$12</span>
+                </div>
+                 <div class="menu-item">
+                    <h4>Truffle Parmesan Fries</h4>
+                    <span class="price">$11</span>
+                </div>
+
+                <h3>Desserts</h3>
+                 <div class="menu-item">
+                    <h4>Dark Chocolate Lava Cake</h4>
+                    <p>Vanilla bean gelato</p>
+                    <span class="price">$11</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Replicate footer from index.html -->
+             <div id="footer-teaser">
+                 <p>Visit Us: 827 Teaneck Rd, Teaneck, NJ 07666 | Call: (201) 555-1234</p> <!-- Corrected Address -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                <li><a href="menus.html">Menus</a></li>
+                <li><a href="events.html">Private Events</a></li>
+                <li><a href="location.html">Location & Hours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+             <div class="footer-socials">
+                <div class="social-group">
+                    <h4>Follow Us</h4>
+                    <ul class="social-icons">
+                        <li><a href="https://www.instagram.com/zinassteakhouse/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a></li>
+                        <li><a href="https://www.facebook.com/people/Zinas-Steakhouse-Grill/61575102149721/#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@zinassteakhouse" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok fa-2x"></i></a></li>
+                    </ul>
+                </div>
+                 <div class="review-group">
+                     <h4>Review Us</h4>
+                     <ul class="social-icons">
+                        <li><a href="https://www.yelp.com/biz/zinas-steakhouse-and-grill-teaneck" target="_blank" aria-label="Yelp"><i class="fab fa-yelp fa-2x"></i></a></li>
+                        <li><a href="https://maps.app.goo.gl/ci9x727RGRkzXqUz7" target="_blank" aria-label="Google Reviews"><i class="fab fa-google fa-2x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>&copy; <span id="current-year"></span> Zina's Steakhouse & Grill. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Menu Toggle Functionality
+        const lunchButton = document.getElementById('show-lunch');
+        const dinnerButton = document.getElementById('show-dinner');
+        const lunchMenu = document.getElementById('lunch-menu');
+        const dinnerMenu = document.getElementById('dinner-menu');
+
+        function showLunch() {
+             if (!lunchMenu.classList.contains('active')) {
+                lunchMenu.classList.add('active');
+                lunchButton.classList.add('active');
+                dinnerMenu.classList.remove('active');
+                dinnerButton.classList.remove('active');
+            }
+        }
+
+        function showDinner() {
+             if (!dinnerMenu.classList.contains('active')) {
+                dinnerMenu.classList.add('active');
+                dinnerButton.classList.add('active');
+                lunchMenu.classList.remove('active');
+                lunchButton.classList.remove('active');
+            }
+        }
+
+        lunchButton.addEventListener('click', showLunch);
+        dinnerButton.addEventListener('click', showDinner);
+
+        // Handle anchor links on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash;
+            if (hash === '#dinner-menu') {
+                showDinner();
+            } else {
+                // Default to showing lunch menu (or if hash is #lunch-menu or empty)
+                showLunch();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Zina's Steakhouse & Grill</title>
+    <meta name="description" content="Get in touch with Zina's Steakhouse & Grill in Teaneck, NJ. Contact us for reservations, inquiries, or feedback.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+             <div class="nav-container">
+                <ul class="nav-left">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menus.html">Menus</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Pickup / Delivery</a>
+                        <div class="dropdown-content">
+                            <a href="#">Order Pickup (Toast/Square)</a> <!-- Add actual link later -->
+                            <a href="#">Delivery via DoorDash</a> <!-- Add actual link later -->
+                            <a href="#">Delivery via UberEats</a> <!-- Add actual link later -->
+                            <a href="#">Delivery via Grubhub</a> <!-- Add actual link later -->
+                        </div>
+                    </li>
+                </ul>
+                <a href="index.html" class="logo-link">
+                    <img src="images/zinalogo2.png" alt="Zina's Steakhouse & Grill Logo" id="header-logo">
+                </a>
+                <ul class="nav-right">
+                    <li><a href="events.html">Private Events</a></li>
+                    <li><a href="location.html">Location & Hours</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contact Us</h1>
+
+        <section id="contact-info">
+            <h2>Get in Touch</h2>
+            <p>We'd love to hear from you! Reach out via phone, email, or the form below.</p>
+            <p><strong>Phone:</strong> <a href="tel:+12015551234">(201) 555-1234</a></p>
+            <p><strong>Email:</strong> <a href="mailto:reservations@zinassteakhouse.com">reservations@zinassteakhouse.com</a></p>
+            <p>For reservations, please call or use the "Reserve a Table" button on our homepage.</p>
+        </section>
+
+        <section id="contact-form">
+            <h2>General Inquiry Form</h2>
+            <form action="https://formspree.io/f/YOUR_CONTACT_FORM_ID" method="POST"> <!-- Replace YOUR_CONTACT_FORM_ID -->
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                 <div class="form-group">
+                    <label for="phone">Phone (Optional):</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">-- Please Select --</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Private Event Question">Private Event Question</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                 <div class="form-group">
+                    <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                    <label for="newsletter">Join our newsletter for steak-lover updates?</label>
+                </div>
+                <button type="submit" class="button">Send Message</button>
+            </form>
+             <p class="form-note">We answer every message within 24 business hours—often sooner.</p>
+        </section>
+
+        <section id="social-links">
+            <h2>Connect With Us</h2>
+            <p>Follow us on:</p>
+            <ul class="social-icons">
+                <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a></li> <!-- Replace # with actual link -->
+                <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a></li> <!-- Replace # with actual link -->
+                <li><a href="#" aria-label="TikTok"><i class="fab fa-tiktok fa-2x"></i></a></li> <!-- Replace # with actual link -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Replicate footer -->
+             <div id="footer-teaser">
+                 <p>Visit Us: 827 Teaneck Rd, Teaneck, NJ 07666 | Call: (201) 555-1234</p> <!-- Corrected Address -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                <li><a href="menus.html">Menus</a></li>
+                <li><a href="events.html">Private Events</a></li>
+                <li><a href="location.html">Location & Hours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+             <div class="footer-socials">
+                <div class="social-group">
+                    <h4>Follow Us</h4>
+                    <ul class="social-icons">
+                        <li><a href="https://www.instagram.com/zinassteakhouse/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a></li>
+                        <li><a href="https://www.facebook.com/people/Zinas-Steakhouse-Grill/61575102149721/#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@zinassteakhouse" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok fa-2x"></i></a></li>
+                    </ul>
+                </div>
+                 <div class="review-group">
+                     <h4>Review Us</h4>
+                     <ul class="social-icons">
+                        <li><a href="https://www.yelp.com/biz/zinas-steakhouse-and-grill-teaneck" target="_blank" aria-label="Yelp"><i class="fab fa-yelp fa-2x"></i></a></li>
+                        <li><a href="https://maps.app.goo.gl/ci9x727RGRkzXqUz7" target="_blank" aria-label="Google Reviews"><i class="fab fa-google fa-2x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>&copy; <span id="current-year"></span> Zina's Steakhouse & Grill. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

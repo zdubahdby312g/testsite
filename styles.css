@@ -1,0 +1,730 @@
+/* Basic Reset & Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Brand Colors (as CSS variables for easy reuse) */
+:root {
+    --color-primary: #333333; /* Charcoal Gray */
+    --color-secondary: #D4AF37; /* Soft Gold */
+    --color-accent: #4A1C2A; /* Deep Burgundy */
+    --color-neutral: #F5F1E9; /* Warm Ivory */
+    --color-optional-accent: #2E3A23; /* Forest Green */
+    --color-white: #fff; /* Keep white for specific uses */
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Default sans-serif font */
+    line-height: 1.6;
+    color: var(--color-neutral); /* Default text color on dark background */
+    background-color: var(--color-primary); /* Charcoal Gray background */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif; /* Elegant serif for headings */
+    margin-bottom: 0.75em;
+    color: var(--color-primary); /* Default Charcoal for headings on light backgrounds */
+}
+
+a {
+    color: var(--color-secondary); /* Soft Gold for general links on dark bg */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Basic Layout Containers (can be refined) */
+header, main, footer {
+    padding: 20px;
+    max-width: 1200px; /* Limit content width */
+    margin: 0 auto; /* Center content */
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: var(--color-neutral); /* Warm Ivory background for sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+    color: var(--color-primary); /* Default text color within sections */
+}
+section h1, section h2, section h3, section h4, section h5, section h6 {
+     color: var(--color-primary); /* Ensure headings inside sections are dark */
+}
+section a {
+    color: var(--color-accent); /* Deep Burgundy for links inside sections */
+}
+section a:hover {
+     color: var(--color-secondary); /* Soft Gold hover */
+}
+
+/* Utility Classes */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-accent); /* Deep Burgundy */
+    color: var(--color-neutral); /* Warm Ivory */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    font-family: 'Inter', sans-serif; /* Ensure button text uses body font */
+}
+
+.button:hover {
+    background-color: #36151f; /* Darker Burgundy */
+    text-decoration: none;
+    color: var(--color-neutral); /* Keep text color on hover */
+}
+
+/* Header & Navigation Styles */
+header {
+    padding: 0; /* Remove padding from header itself */
+    max-width: none; /* Allow header to be full width */
+    margin: 0;
+}
+
+header nav {
+    background-color: var(--color-primary); /* Charcoal Gray */
+    padding: 0; /* Remove vertical padding for minimum height */
+    position: relative; /* Needed for absolute positioning if required later */
+}
+
+.nav-container { /* New container to center nav content */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out nav groups and logo */
+    max-width: 1200px; /* Max width for the content */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Padding inside the container */
+}
+
+#header-logo {
+    max-height: 100px; /* Larger logo */
+    display: block; /* Ensure it's a block for margin auto */
+    margin: 5px auto; /* Add small vertical margin, center horizontally */
+}
+
+/* Style for the lists holding nav links */
+header nav ul {
+    display: flex;
+    gap: 20px;
+    padding: 0; /* Remove padding from ul */
+    background-color: transparent; /* Remove background from ul */
+    border-radius: 0; /* Remove radius from ul */
+    margin: 0; /* Remove margin from ul */
+    flex-basis: calc(50% - 80px); /* Adjusted space for 100px logo */
+}
+
+header nav ul.nav-left {
+    justify-content: flex-end; /* Align left links to the right */
+}
+
+header nav ul.nav-right {
+     justify-content: flex-start; /* Align right links to the left */
+}
+
+header nav ul li a {
+    color: var(--color-neutral); /* Warm Ivory text */
+    font-family: 'Playfair Display', serif; /* More elegant font for nav links */
+    font-weight: bold; /* Keep bold for readability */
+    font-size: 1.1em; /* Slightly increase size to match font style */
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    text-decoration: none;
+    color: var(--color-secondary); /* Soft Gold hover */
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+  position: relative; /* Needed for absolute positioning of dropdown content */
+  display: inline-block; /* Keep it in line with other nav items */
+}
+
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute;
+  background-color: var(--color-primary); /* Charcoal background for dropdown */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3); /* Slightly darker shadow */
+  z-index: 1; /* Ensure it appears above other content */
+  border-radius: 0 0 5px 5px; /* Match nav radius */
+}
+
+.dropdown-content a {
+  color: var(--color-neutral); /* Warm Ivory text */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: normal; /* Normal weight for dropdown items */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--color-accent); /* Deep Burgundy background on hover */
+    color: var(--color-neutral); /* Warm Ivory text on hover */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Optional: Style the dropdown button */
+.dropdown .dropbtn {
+    /* Inherits styles from header nav ul li a */
+}
+
+
+/* REMOVED Old Hero Section Styles */
+/* #hero { ... } */
+
+/* NEW Slideshow Styles */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 85vh; /* Adjust viewport height as needed */
+    overflow: hidden;
+    margin-bottom: 40px; /* Space before next section */
+    background-color: var(--color-accent); /* Deep Burgundy background */
+}
+
+.slide {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    background-size: cover;
+    background-position: center;
+    color: var(--color-neutral); /* Warm Ivory text */
+    opacity: 0; /* Hidden by default for fade */
+    transition: opacity 1s ease-in-out; /* Fade transition */
+}
+
+.slide.active {
+    display: flex; /* Use flex to arrange text/image */
+    opacity: 1; /* Visible */
+}
+
+.slide-content {
+    display: flex;
+    /* max-width: 1200px; Removed */
+    width: 100%; /* Make content box full width */
+    /* margin: auto; Removed */
+    align-items: center;
+    background-color: #36151f; /* Darker Burgundy */
+    padding: 30px 5%; /* Add horizontal padding (e.g., 5%) */
+    border-radius: 0; /* Remove border-radius if it spans full width */
+    min-height: 50vh; /* Ensure it has some minimum height */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.slide-text {
+    flex: 1; /* Take up available space */
+    padding-right: 30px;
+}
+
+.slide-text h1 {
+    color: var(--color-neutral); /* Warm Ivory */
+    font-size: 2.8em;
+    margin-bottom: 0.5em;
+}
+
+.slide-text p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    color: var(--color-neutral); /* Ensure paragraph text is also light */
+}
+
+.slide-image img {
+    max-width: 100%;
+    max-height: 60vh; /* Limit image height */
+    height: auto; /* Maintain aspect ratio if needed, but cover might override */
+    width: 100%; /* Ensure image tries to fill width */
+    object-fit: cover; /* Scale while preserving aspect ratio, cropping if necessary */
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Slideshow Dots */
+.slideshow-dots {
+    text-align: center;
+    position: absolute;
+    bottom: 20px; /* Position at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Above slides */
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: rgba(245, 241, 233, 0.5); /* Semi-transparent Ivory */
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: rgba(245, 241, 233, 0.9); /* Brighter Ivory */
+}
+
+
+/* Homepage Menu Links (Image Boxes) Styles */
+.homepage-menu-links {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--color-neutral); /* Warm Ivory background */
+    margin: 0 auto; /* Center container */
+    max-width: 1200px;
+}
+
+.homepage-menu-links h2 {
+     margin-bottom: 30px;
+}
+
+.menu-link-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between boxes */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.menu-link-box {
+    position: relative;
+    display: block;
+    width: 300px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.menu-link-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.menu-link-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the box */
+    transition: transform 0.3s ease;
+}
+
+.menu-link-box:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.menu-link-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0)); /* Gradient overlay */
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+}
+
+.menu-link-overlay h3 {
+    color: var(--color-neutral); /* Warm Ivory text */
+    margin: 0;
+    font-size: 1.8em;
+}
+
+
+/* Highlights Section */
+#highlights { /* Add margin-top if needed after removing hero */
+    margin-top: 40px;
+}
+
+#highlights h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.highlight-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.highlight-cards .card {
+    flex-basis: calc(33% - 20px); /* Aim for 3 cards per row */
+    min-width: 250px; /* Minimum width before wrapping */
+    background-color: var(--color-neutral); /* Warm Ivory */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.highlight-cards .card h3 {
+    color: var(--color-primary); /* Charcoal */
+    margin-top: 10px;
+/* highlight-cards .card h3 styles remain the same */
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--color-accent); /* Deep Burgundy */
+    color: var(--color-neutral); /* Warm Ivory text */
+    padding: 30px 0; /* Vertical padding only */
+    text-align: center;
+    margin-top: 40px;
+    /* Removed max-width and margin: auto */
+}
+
+.footer-container { /* New container for footer content */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Padding inside the container */
+}
+
+#footer-teaser {
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    color: var(--color-neutral); /* Ensure teaser text is light */
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+footer nav ul li a {
+    color: var(--color-neutral); /* Warm Ivory */
+}
+
+footer nav ul li a:hover {
+    color: var(--color-secondary); /* Soft Gold */
+}
+
+footer p {
+    font-size: 0.8em;
+}
+
+/* Menu Page Specific Styles */
+.menu-toggle {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu-toggle .button {
+    margin: 0 5px;
+}
+
+.menu-content {
+    display: none; /* Hide menu sections by default */
+}
+
+.menu-content.active {
+    display: block; /* Show the active menu section */
+}
+
+.menu-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #e0e0e0; /* Lighter gray separator */
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item h4 {
+    display: inline-block; /* Keep title and price on same line */
+    margin-bottom: 5px;
+    color: var(--color-primary); /* Charcoal */
+}
+
+.menu-item .price {
+    float: right; /* Align price to the right */
+    font-weight: bold;
+    color: var(--color-accent); /* Deep Burgundy */
+}
+
+.menu-item p {
+    clear: both; /* Ensure description is below title/price */
+    font-size: 0.9em;
+    color: var(--color-primary); /* Charcoal */
+}
+
+.menu-note {
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 15px;
+    color: #555; /* Slightly darker gray note */
+}
+
+
+/* Form Styles (Basic) */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--color-primary); /* Charcoal */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    color: var(--color-primary); /* Ensure text input is dark */
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.form-group input[type="checkbox"] + label {
+    display: inline-block; /* Keep checkbox and label together */
+    font-weight: normal;
+}
+
+
+.form-note {
+     font-size: 0.9em;
+     margin-top: 10px;
+     color: #555; /* Slightly darker gray note */
+}
+
+/* Location Page Specific Styles */
+.map-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    margin-bottom: 20px;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+#hours table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    text-align: left;
+}
+
+#hours th, #hours td {
+    padding: 10px 15px;
+    border: 1px solid #ddd; /* Lighter border */
+}
+
+#hours th {
+    background-color: var(--color-accent); /* Deep Burgundy */
+    color: var(--color-neutral); /* Warm Ivory */
+    font-weight: bold;
+}
+
+#hours tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light background for even rows */
+}
+
+#hours td:nth-child(1) { /* Style the Day column */
+    font-weight: bold;
+    color: var(--color-primary); /* Charcoal */
+}
+
+/* Icon Styles */
+.card-icon {
+    color: var(--color-secondary); /* Soft Gold */
+    margin-bottom: 15px; /* Space below icon */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+    margin-top: 10px;
+}
+
+.social-icons li a {
+    color: var(--color-accent); /* Deep Burgundy for icons in sections */
+    transition: color 0.3s ease;
+}
+
+.social-icons li a:hover {
+    color: var(--color-secondary); /* Soft Gold hover */
+}
+
+/* Footer Socials/Reviews */
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align tops of groups */
+    gap: 50px; /* Space between Follow and Review groups */
+    margin-top: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.social-group h4, .review-group h4 {
+    color: var(--color-neutral); /* Warm Ivory */
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.footer-socials .social-icons {
+    margin-top: 0; /* Reset margin from general .social-icons */
+    gap: 15px; /* Adjust gap within each group */
+}
+
+.footer-socials .social-icons li a {
+    color: var(--color-neutral); /* Warm Ivory */
+}
+.footer-socials .social-icons li a:hover {
+    color: var(--color-secondary); /* Soft Gold */
+}
+
+
+/* Homepage Map Section */
+#homepage-map {
+    padding: 0; /* Remove padding if map should touch edges */
+    background-color: var(--color-accent); /* Deep Burgundy */
+    border-top: 3px solid var(--color-secondary); /* Added Gold border back */
+    border-bottom: 3px solid var(--color-secondary); /* Added Gold border back */
+    margin-bottom: 0; /* Remove default section margin if needed */
+}
+#homepage-map h2 {
+    text-align: center;
+    color: var(--color-neutral); /* Warm Ivory */
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+#homepage-map .map-container { /* Reuse existing map container style */
+    max-width: 1200px; /* Limit map width */
+    margin: 0 auto; /* Center map */
+    padding-bottom: 30px; /* Space below map */
+}
+#homepage-map p { /* Style the address text specifically */
+    color: var(--color-white); /* Changed to white */
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+/* Simple Page Load Fade-In */
+body {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+
+/* Popup Styles */
+.popup {
+    display: none; /* Hidden by default - JS will change to 'flex' */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    position: relative;
+    background-color: var(--color-neutral); /* Warm Ivory background */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90vh;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.popup-content img {
+    max-width: 100%;
+    max-height: calc(90vh - 80px); /* Adjust based on padding and close button */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center image if needed */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: var(--color-primary); /* Charcoal */
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--color-accent); /* Burgundy */
+    text-decoration: none;
+}
+
+/* Event Page Hero Image */
+#event-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 400px;
+    object-fit: cover;
+    border: 5px solid var(--color-white); /* White border */
+    border-radius: 8px; /* Optional: match section radius */
+}
+
+
+/* Add Responsive Design rules later */
+/* Add specific component styles later */

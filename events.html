@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Events - Zina's Steakhouse & Grill</title>
+    <meta name="description" content="Host your next celebration or corporate event in our private dining room at Zina's Steakhouse & Grill in Teaneck. Custom menus and dedicated service.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+             <div class="nav-container">
+                <ul class="nav-left">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menus.html">Menus</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Pickup / Delivery</a>
+                        <div class="dropdown-content">
+                            <a href="#">Order Pickup (Toast/Square)</a> <!-- Add actual link later -->
+                            <a href="#">Delivery via DoorDash</a> <!-- Add actual link later -->
+                            <a href="#">Delivery via UberEats</a> <!-- Add actual link later -->
+                            <a href="#">Delivery via Grubhub</a> <!-- Add actual link later -->
+                        </div>
+                    </li>
+                </ul>
+                <a href="index.html" class="logo-link">
+                    <img src="images/zinalogo2.png" alt="Zina's Steakhouse & Grill Logo" id="header-logo">
+                </a>
+                <ul class="nav-right">
+                    <li><a href="events.html">Private Events</a></li>
+                    <li><a href="location.html">Location & Hours</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="event-hero" style="padding: 0; background-color: transparent; box-shadow: none; border-radius: 0; margin-bottom: 20px;">
+            <!-- Updated hero image -->
+            <img src="images/room.png" alt="Zina's Steakhouse private dining room"> <!-- Removed inline styles -->
+            <!-- Removed redundant h1/p as they might be part of the image or added differently -->
+        </section>
+
+        <section> <!-- Added section wrapper for content below hero -->
+            <h1>Host Your Event at Zina's</h1>
+            <p>Create lasting memories in our elegant private dining space.</p>
+        </section>
+
+        <section id="event-why">
+            <h2>Why Host at Zina's?</h2>
+            <ul>
+                <li>✓ Dedicated event coordinator</li>
+                <li>✓ Customizable menus featuring our signature steaks</li>
+                <li>✓ Full AV setup available</li>
+                <li>✓ Convenient location with free evening parking</li>
+            </ul>
+        </section>
+
+        <section id="event-packages">
+            <h2>Event Packages</h2>
+            <div class="package">
+                <h3>Cocktail Reception (2 hrs)</h3>
+                <p>Passed hors d’oeuvres, open bar | $65 pp</p>
+            </div>
+            <div class="package">
+                <h3>Sit-Down Dinner (3 courses)</h3>
+                <p>Choice of entrée, wine pairings | $95 pp</p>
+            </div>
+            <div class="package">
+                <h3>Chef’s Tasting (5 courses)</h3>
+                <p>Seasonal chef-curated menu | $125 pp</p>
+            </div>
+            <p class="note">Packages are customizable. Contact us to discuss your needs.</p>
+        </section>
+
+        <section id="event-specs">
+            <h2>Room Specifications</h2>
+            <ul>
+                <li>Capacity: 40 seated / 60 standing</li>
+                <li>Features: Private bar access, 60" Flatscreen TV, Bluetooth sound system</li>
+            </ul>
+        </section>
+
+        <section id="event-gallery">
+            <h2>Gallery</h2>
+            <!-- Placeholder for image gallery -->
+            <p>[Placeholder for images: table settings, birthday celebration, corporate meeting]</p>
+        </section>
+
+        <section id="event-inquiry">
+            <h2>Inquire About Your Event</h2>
+            <form action="https://formspree.io/f/YOUR_EVENT_FORM_ID" method="POST"> <!-- Replace YOUR_EVENT_FORM_ID -->
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                 <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="event-date">Preferred Event Date:</label>
+                    <input type="date" id="event-date" name="event_date" required>
+                </div>
+                <div class="form-group">
+                    <label for="party-size">Estimated Party Size:</label>
+                    <input type="number" id="party-size" name="party_size" min="10" required> <!-- Example min size -->
+                </div>
+                <div class="form-group">
+                    <label for="message">Message / Questions:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="button">Submit Inquiry</button>
+            </form>
+            <p class="form-note">Our event coordinator will respond within 24 business hours.</p>
+        </section>
+
+        <section id="event-faq">
+            <h2>Frequently Asked Questions</h2>
+            <details>
+                <summary>Do you allow outside cakes?</summary>
+                <p>Yes, we allow outside cakes with a small plating fee of $3 per guest.</p>
+            </details>
+            <details>
+                <summary>What is the minimum spend for the private room?</summary>
+                <p>Minimum spend varies by day and time. Please submit an inquiry for details specific to your desired date.</p>
+            </details>
+             <details>
+                <summary>Can we decorate the room?</summary>
+                <p>Yes, you may bring decorations. We ask that you avoid confetti and anything that needs to be affixed to the walls in a way that might cause damage.</p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Replicate footer -->
+             <div id="footer-teaser">
+                 <p>Visit Us: 827 Teaneck Rd, Teaneck, NJ 07666 | Call: (201) 555-1234</p> <!-- Corrected Address -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                <li><a href="menus.html">Menus</a></li>
+                <li><a href="events.html">Private Events</a></li>
+                <li><a href="location.html">Location & Hours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+             <div class="footer-socials">
+                <div class="social-group">
+                    <h4>Follow Us</h4>
+                    <ul class="social-icons">
+                        <li><a href="https://www.instagram.com/zinassteakhouse/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a></li>
+                        <li><a href="https://www.facebook.com/people/Zinas-Steakhouse-Grill/61575102149721/#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@zinassteakhouse" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok fa-2x"></i></a></li>
+                    </ul>
+                </div>
+                 <div class="review-group">
+                     <h4>Review Us</h4>
+                     <ul class="social-icons">
+                        <li><a href="https://www.yelp.com/biz/zinas-steakhouse-and-grill-teaneck" target="_blank" aria-label="Yelp"><i class="fab fa-yelp fa-2x"></i></a></li>
+                        <li><a href="https://maps.app.goo.gl/ci9x727RGRkzXqUz7" target="_blank" aria-label="Google Reviews"><i class="fab fa-google fa-2x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>&copy; <span id="current-year"></span> Zina's Steakhouse & Grill. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

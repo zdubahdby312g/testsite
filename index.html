@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zina's Steakhouse & Grill - Teaneck, NJ</title>
+    <meta name="description" content="Premium dry-aged steaks, craft cocktails, and warm hospitality in Teaneck, NJ. Family-owned since 2005.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <ul class="nav-left">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menus.html">Menus</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Pickup / Delivery</a>
+                        <div class="dropdown-content">
+                            <a href="#">Order Pickup (Toast/Square)</a> <!-- Add actual link later -->
+                            <a href="#">Delivery via DoorDash</a> <!-- Add actual link later -->
+                            <a href="#">Delivery via UberEats</a> <!-- Add actual link later -->
+                            <a href="#">Delivery via Grubhub</a> <!-- Add actual link later -->
+                        </div>
+                    </li>
+                </ul>
+                <a href="index.html" class="logo-link">
+                    <img src="images/zinalogo2.png" alt="Zina's Steakhouse & Grill Logo" id="header-logo">
+                </a>
+                <ul class="nav-right">
+                    <li><a href="events.html">Private Events</a></li>
+                    <li><a href="location.html">Location & Hours</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Slideshow Section -->
+        <section class="slideshow-container">
+            <!-- Slide 1 -->
+            <div class="slide active"> <!-- Removed inline background-image -->
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <h1>Experience Prime Cuts</h1>
+                        <p>Discover our meticulously dry-aged steaks, grilled to perfection over an oak fire.</p>
+                    </div>
+                    <div class="slide-image">
+                        <img src="images/photo1.png" alt="Perfectly cooked steak">
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+             <div class="slide"> <!-- Removed inline background-image -->
+                 <div class="slide-content">
+                    <div class="slide-text">
+                        <h1>Elegant Ambiance</h1>
+                        <p>Enjoy warm hospitality in our sophisticated dining room, perfect for any occasion.</p>
+                    </div>
+                    <div class="slide-image">
+                        <img src="images/photo2.png" alt="Restaurant interior ambiance">
+                    </div>
+                </div>
+            </div>
+             <!-- Slide 3 -->
+             <div class="slide"> <!-- Removed inline background-image -->
+                 <div class="slide-content">
+                    <div class="slide-text">
+                        <h1>Beyond the Steak</h1>
+                        <p>Explore our curated selection of fresh seafood, from pan-seared Branzino to classic Shrimp Cocktail.</p>
+                    </div>
+                     <div class="slide-image">
+                        <img src="images/photo3.jpg" alt="Fresh seafood dish">
+                    </div>
+                </div>
+            </div>
+            <!-- Add more slides as needed -->
+
+            <!-- Dots/Indicators -->
+            <div class="slideshow-dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <!-- Add more dots if more slides are added -->
+            </div>
+        </section>
+
+        <!-- Homepage Menu Links (Image Boxes) -->
+        <section class="homepage-menu-links">
+            <h2>Explore Our Menus</h2>
+            <div class="menu-link-container">
+                <a href="menus.html#lunch-menu" class="menu-link-box">
+                    <img src="images/lunchmenu.png" alt="Lunch menu preview">
+                    <div class="menu-link-overlay">
+                        <h3>Lunch Menu</h3>
+                    </div>
+                </a>
+                <a href="menus.html#dinner-menu" class="menu-link-box">
+                     <img src="images/dinnermenu.png" alt="Dinner menu preview">
+                     <div class="menu-link-overlay">
+                        <h3>Dinner Menu</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Highlights Section -->
+        <section id="highlights">
+            <h2>Our Signatures</h2>
+            <div class="highlight-cards">
+                <div class="card">
+                    <i class="fas fa-utensils fa-3x card-icon"></i> <!-- Steak/Utensils icon -->
+                    <h3>Dry-Aged Steaks</h3>
+                    <p>Hand-selected USDA Prime, aged 28 days.</p>
+                </div>
+                <div class="card">
+                     <i class="fas fa-martini-glass-citrus fa-3x card-icon"></i> <!-- Cocktail icon -->
+                    <h3>Craft Cocktails</h3>
+                    <p>House-infused spirits & seasonal syrups.</p>
+                </div>
+                <div class="card">
+                     <i class="fas fa-users fa-3x card-icon"></i> <!-- Group/Users icon -->
+                    <h3>Private Dining</h3>
+                    <p>Book our 40-seat room for celebrations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signature Dish Carousel (Placeholder) -->
+        <section id="dish-carousel">
+            <h2>Taste the Difference</h2>
+            <!-- Carousel implementation later -->
+            <p>[Placeholder for signature dish images: 40-oz Tomahawk Rib-eye, Lobster Mac & Cheese, etc.]</p>
+        </section>
+
+        <!-- About Blurb Section -->
+        <section id="about">
+            <h2>Our Story</h2>
+            <!-- Add owner photo later -->
+            <p>Zina’s began as a dream to bring Manhattan steakhouse quality to our hometown of Teaneck. Two decades later, we’re still firing oak-fed grills nightly.</p>
+        </section>
+
+         <!-- Homepage Map Section -->
+         <section id="homepage-map">
+            <h2>Find Us</h2>
+             <div class="map-container">
+                 <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3016.405979106024!2d-74.0062712!3d40.884908599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f0c826398f97%3A0x78f346552554b613!2sZina's%20Steakhouse%20%26%20Grill!5e0!3m2!1sen!2sus!4v1745099438147!5m2!1sen!2sus"
+                    width="100%"
+                    height="400"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Google Map showing location of Zina's Steakhouse at 827 Teaneck Rd">
+                 </iframe>
+             </div>
+             <p style="text-align: center; color: var(--color-cream); padding-bottom: 20px;">827 Teaneck Rd, Teaneck, NJ 07666</p>
+         </section>
+
+        <!-- Review Snippet Section Removed -->
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Footer Teaser -->
+            <div id="footer-teaser">
+                <p>Visit Us: 827 Teaneck Rd, Teaneck, NJ 07666 | Call: (201) 555-1234</p> <!-- Corrected Address -->
+                <!-- Add map thumbnail later -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                <li><a href="menus.html">Menus</a></li>
+                <li><a href="events.html">Private Events</a></li>
+                <li><a href="location.html">Location & Hours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                    <!-- Add social links later -->
+                </ul>
+            </nav>
+             <div class="footer-socials">
+                <div class="social-group">
+                    <h4>Follow Us</h4>
+                    <ul class="social-icons">
+                        <li><a href="https://www.instagram.com/zinassteakhouse/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a></li>
+                        <li><a href="https://www.facebook.com/people/Zinas-Steakhouse-Grill/61575102149721/#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@zinassteakhouse" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok fa-2x"></i></a></li>
+                    </ul>
+                </div>
+                 <div class="review-group">
+                     <h4>Review Us</h4>
+                     <ul class="social-icons">
+                        <li><a href="https://www.yelp.com/biz/zinas-steakhouse-and-grill-teaneck" target="_blank" aria-label="Yelp"><i class="fab fa-yelp fa-2x"></i></a></li>
+                        <li><a href="https://maps.app.goo.gl/ci9x727RGRkzXqUz7" target="_blank" aria-label="Google Reviews"><i class="fab fa-google fa-2x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>&copy; <span id="current-year"></span> Zina's Steakhouse & Grill. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to update the year dynamically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Slideshow Functionality
+        let slideIndex = 1; // Start with the first slide (index 1)
+        let slideTimeout; // Variable to hold the timeout
+
+        showSlides(slideIndex); // Initial call to display the first slide
+
+        // Function to advance to next slide (used by timer)
+        function plusSlides() {
+            clearTimeout(slideTimeout); // Clear existing timer
+            showSlides(slideIndex += 1);
+        }
+
+        // Function to go to a specific slide (used by dots)
+        function currentSlide(n) {
+            clearTimeout(slideTimeout); // Clear existing timer
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.querySelectorAll(".slideshow-container .slide");
+            let dots = document.querySelectorAll(".slideshow-dots .dot");
+
+            if (n > slides.length) {slideIndex = 1} // Wrap around to first slide
+            if (n < 1) {slideIndex = slides.length} // Wrap around to last slide if going back from first
+
+            // Hide all slides (set opacity to 0)
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+                // Keep display:flex for layout, just control opacity for fade
+                slides[i].style.opacity = "0";
+                 // Ensure display is set correctly after potential initial none state
+                slides[i].style.display = "flex";
+            }
+
+            // Remove active class from all dots
+            for (i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+
+            // Show the current slide (set opacity to 1) and activate dot
+            slides[slideIndex-1].classList.add("active");
+            slides[slideIndex-1].style.opacity = "1";
+            dots[slideIndex-1].classList.add("active");
+
+            // Set timer for next automatic slide change
+            slideTimeout = setTimeout(plusSlides, 5000); // Change image every 5 seconds
+        }
+
+        // Popup Functionality (Example for Easter)
+        const popup = document.getElementById('easter-popup');
+        const closePopupButton = document.getElementById('close-popup');
+
+        // Show popup slightly after page load
+        document.addEventListener('DOMContentLoaded', () => {
+             // Initial setup for slideshow slides (ensure correct initial state for fade)
+             let slides = document.querySelectorAll(".slideshow-container .slide");
+             for (let i = 0; i < slides.length; i++) {
+                 if (!slides[i].classList.contains('active')) {
+                     slides[i].style.display = "flex"; // Ensure display is flex
+                     slides[i].style.opacity = "0"; // Start hidden for fade-in
+                 } else {
+                     slides[i].style.opacity = "1"; // Ensure first slide is visible
+                 }
+             }
+
+             // Show popup immediately after DOM is ready
+            if (popup) {
+                 popup.style.display = 'flex';
+            }
+        });
+
+        // Close popup when close button is clicked
+        if (closePopupButton) {
+            closePopupButton.addEventListener('click', () => {
+                if (popup) {
+                    popup.style.display = 'none';
+                }
+            });
+        }
+
+        // Optional: Close popup if user clicks outside the image area
+        if (popup) {
+            popup.addEventListener('click', (event) => {
+                // Check if the click was directly on the overlay (popup) itself
+                if (event.target === popup) {
+                    popup.style.display = 'none';
+                }
+            });
+        }
+
+    </script>
+
+    <!-- Easter Popup Structure -->
+    <div id="easter-popup" class="popup">
+        <div class="popup-content">
+            <span id="close-popup" class="close-button">&times;</span>
+            <img src="images/easter.png" alt="Easter Specials">
+            <!-- Optional: Add text or a button here -->
+        </div>
+    </div>
+
+</body>
+</html>
